@@ -12,10 +12,16 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/70 dark:bg-black/40 border-b border-gray-200 dark:border-white/5">
       <Container className="flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-700 rounded-lg flex items-center justify-center text-white font-bold shadow-lg shadow-emerald-500/20">
-                G
-            </div>
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+        >
+            <img
+                src="/images/logo.png"
+                alt="Give IT Back"
+                className="w-10 h-10 object-contain"
+            />
             <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight tracking-tight dark:text-white">Give IT Back</span>
             </div>
